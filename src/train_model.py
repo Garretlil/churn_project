@@ -48,7 +48,6 @@ for epoch in range(EPOCHS):
 
 def evaluate_model(model,dataset):
     model.eval()
-    loss=0
     probs=[]
     labels=[]
     with torch.no_grad():
