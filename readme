@@ -1,0 +1,23 @@
+# Churn Prediction System
+
+End‑to‑end ML‑система для предсказания оттока клиентов.
+
+## Стек
+- **ML:** PyTorch, scikit‑learn, Pandas
+- **API:** FastAPI, Uvicorn
+- **DevOps:** Docker, docker‑compose, GitHub Actions
+- **Мониторинг:** Evidently AI, Telegram
+
+## Быстрый старт
+
+```bash
+# 1. Клонировать репозиторий
+git clone git@github.com:ErshovDaniil/churn_project.git
+cd churn_project
+
+# 2. Собрать и запустить
+docker-compose build
+docker-compose up -d
+
+# 3. Проверить, что работает
+curl http://localhost:8000/health
