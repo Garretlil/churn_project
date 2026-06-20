@@ -6,18 +6,16 @@ End‑to‑end ML‑система для предсказания оттока 
 - **ML:** PyTorch, scikit‑learn, Pandas
 - **API:** FastAPI, Uvicorn
 - **DevOps:** Docker, docker‑compose, GitHub Actions
-- **Мониторинг:** Evidently AI, Telegram
 
-## Быстрый старт
+## Запуск
 
-```bash
 # 1. Клонировать репозиторий
-git clone git@github.com:ErshovDaniil/churn_project.git
+git clone git@github.com:Garretlil/churn_project.git
 cd churn_project
 
 # 2. Собрать и запустить
 docker-compose build
 docker-compose up -d
 
-# 3. Проверить, что работает
+# 3. Проверка работоспособности
 curl http://localhost:8000/health
