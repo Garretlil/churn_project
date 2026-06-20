@@ -14,7 +14,7 @@ import numpy as np
 from sklearn.metrics import precision_score, recall_score, f1_score, roc_auc_score
 
 
-EPOCHS=100
+EPOCHS=200
     
 data,mean,std=getData()
 dataset=TensorDataset(data[0],data[2])
@@ -56,7 +56,7 @@ def evaluate_model(model,dataset):
             batch_y=batch_y.float().reshape(-1,1)
             pred=model.forward(batch_x)
             probs.extend(pred.numpy())
-            labels.extend((pred>0.1).float().numpy())
+            labels.extend((pred>0.5).float().numpy())
     return [probs,labels]
 
 
@@ -95,3 +95,4 @@ norm_params={
 with open(f'{file_path}/params.pkl','wb') as f:
     pickle.dump(norm_params,f)
 
+print(metrics)
